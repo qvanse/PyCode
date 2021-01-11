@@ -5,8 +5,19 @@ $ git config --global user.email "email@example.com"
 $ mkdir learngit #创建文件夹
 $ cd learngit #进入文件夹
 $ pwd #显示当前目录
+$ ls -ah #可查看当前目录下所有文件（包括隐藏文件）。
 
 $ git init #通过git init命令把这个目录变成git可管理的仓库
 
-$ ls -ah #可查看当前目录下所有文件（包括隐藏文件）。
+#创建一个文件readme.txt
+$ git add readme.txt #把文件添加到版本库
+$ git commit -m "wrote a readme file" #把文件提交到仓库
+$ git status #掌握仓库当前的状态
+$ git diff <文件名> #查看修改的内容
+
+
+
+
+
+
 
