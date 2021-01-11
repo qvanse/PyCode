@@ -1,0 +1,12 @@
+安装完成后，还需要最后一步设置，在命令行输入：
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+$ mkdir learngit #创建文件夹
+$ cd learngit #进入文件夹
+$ pwd #显示当前目录
+
+$ git init #通过git init命令把这个目录变成git可管理的仓库
+
+$ ls -ah #可查看当前目录下所有文件（包括隐藏文件）。
+
