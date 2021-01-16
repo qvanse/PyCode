@@ -18,6 +18,49 @@ $ git log #告诉我们历史记录
 $ git log --pretty=oneline 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数
 $ git reset --hard HEAD^ #回退
 $ git reflog #查看命令历史，以便确定要回到未来的哪个版本。
+$ git checkout -- readme.txt #丢弃工作区的修改[没有git add]
+$ git reset HEAD <file> #丢弃git add 的修改[没有git commit]
+$ rm <文件> #删除文件
+$ git rm test.txt #删除文件并添加到 git add
+
+远程仓库
+$ ssh-keygen -t rsa -C "youremail@example.com" #创建SSH Key
+将id_rsa.pub文件的内容粘贴到hithub的SSH keys中。
+添加远程库
+情景：
+你已经在本地创建了一个Git仓库后，又想在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步，这样，GitHub上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。
+登陆GitHub，创建一个新的仓库learngit：
+目前，在GitHub上的这个learngit仓库还是空的，GitHub告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。
+现在，我们根据GitHub的提示，在本地的learngit仓库下运行命令：
+$ git remote add origin git@github.com:michaelliao/learngit.git 
+#注意：这一步出现错误。
+##################################################################################
+提交git发生的问题fatal: remote origin already exists.[先前做过提交没有成功]
+解决方法：
+解决办法如下：
+1、先输入 git remote rm origin
+2、再输入 git remote add origin************** 
+参考https://www.cnblogs.com/zhengzemin/p/remote_origin_already_exists.html
+##################################################################################
+添加后，远程库的名字就是origin
+下一步，就可以把本地库的所有内容推送到远程库上：
+$ git push -u origin master
+#注意：这一步出现错误。
+##################################################################################
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:qvanse/PyCode.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+##################################################################################
+#解决方法：改为
+$ git push -u origin master -f
+顺利通过。参考https://blog.csdn.net/downanddusk/article/details/88344389
+把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+
+
 
 
 
