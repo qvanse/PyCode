@@ -22,7 +22,16 @@ $ git checkout -- readme.txt #丢弃工作区的修改[没有git add]
 $ git reset HEAD <file> #丢弃git add 的修改[没有git commit]
 $ rm <文件> #删除文件
 $ git rm test.txt #删除文件并添加到 git add
-
+**********************************************************************************
+回退有三种状态：
+1. 执行git add 和 git commit
+利用 git reset --hard 
+2. 没有执行git add和git commit ,仅仅删除工作区的修改
+利用 git checkout -- 文件名
+3. 执行git add 没有执行 git commit
+利用 git reset HEAD 文件名
+	 git checkout -- 文件名
+**********************************************************************************
 远程仓库
 $ ssh-keygen -t rsa -C "youremail@example.com" #创建SSH Key
 将id_rsa.pub文件的内容粘贴到hithub的SSH keys中。
