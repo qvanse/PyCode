@@ -88,6 +88,16 @@ $ git push origin master
 现在，远程库已经准备好了，下一步是用命令git clone克隆一个本地库：
 $ git clone git@github.com:michaelliao/gitskills.git
 学习到这里。发现前边有太多不明白的东西。所以决定从头再学一遍，然后再继续往下学。
+分支管理
+	创建与合并分支 
+	git checkout -b dev 或者 git switch -c dev #创建并切换到dev,相当于 git branch dev 
+																	   git checkout dev
+	git branch #查看当前分支
+	git checkout master 或者 git switch master #切换到master分支
+	git merge dev #把dev分支合并到master分支上
+	git branch -d dev #删除dev分支
+	
+	
 
 
 
