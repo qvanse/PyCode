@@ -103,6 +103,8 @@ $ git clone git@github.com:michaelliao/gitskills.git
 分支管理策略
 	禁用fast forward 模式合并分支并加commit
 	git merge --no--ff -m "merge with no --ff" dev
+	查看分支历史
+	git log --graph --pretty=oneline --abbrev-commit
 	
 	
 
