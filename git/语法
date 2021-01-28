@@ -105,6 +105,59 @@ $ git clone git@github.com:michaelliao/gitskills.git
 	git merge --no--ff -m "merge with no --ff" dev
 	查看分支历史
 	git log --graph --pretty=oneline --abbrev-commit
+BUG分支
+	存储工作现场 
+	git stash
+	查看存储工作现场列表
+	git stash list
+	恢复工作现场 
+	git stash apply #恢复现场
+	git stash drop #删除工作现场
+	git stash pop #恢复现场并删除
+	git cherry-pick [XXXXXXX] #复制一个特定的提交到当前分支
+Feature分支
+	新建一个分支
+	丢弃一个没用过的分支 
+	git branch -D <name>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 
